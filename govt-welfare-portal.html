@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pradhan Mantri Samajik Kalyan Yojana | Government of India</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #0d2045;
+    --royal: #1a3a7c;
+    --gold: #c8953a;
+    --gold-light: #e8b455;
+    --saffron: #ff6b00;
+    --white: #f8f6f0;
+    --offwhite: #ede9df;
+    --gray: #8a8070;
+    --success: #1a7a4a;
+    --border: rgba(200,149,58,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: #06101f;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--gray);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .topbar-inner a { color: var(--gold); text-decoration: none; margin-left: 16px; }
+  .topbar-inner a:hover { color: var(--gold-light); }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, var(--deep-blue) 0%, #0f2d5c 60%, #1a3a7c 100%);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .emblem {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+  .header-text { flex: 1; }
+  .header-text .hindi {
+    font-family: 'Noto Serif', serif;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+  }
+  .header-text h1 {
+    font-family: 'Noto Serif', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .header-text .subtitle {
+    font-size: 12px;
+    color: var(--offwhite);
+    opacity: 0.7;
+    margin-top: 3px;
+    letter-spacing: 1px;
+  }
+  .header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .btn-login {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    padding: 8px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+  }
+  .btn-login:hover { background: var(--gold); color: var(--navy); }
+  .btn-register {
+    background: var(--saffron);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-register:hover { background: #e05500; transform: translateY(-1px); }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--royal);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+  }
+  nav a {
+    color: var(--offwhite);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 18px;
+    display: block;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.3px;
+  }
+  nav a:hover, nav a.active {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+    background: rgba(200,149,58,0.08);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0a1628 0%, #0d2045 40%, #0f2d5c 100%);
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(200,149,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--saffron), var(--gold), transparent);
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--saffron);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .hero h2 span { color: var(--gold); }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(248,246,240,0.75);
+    margin-bottom: 28px;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px 28px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200,149,58,0.3); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(248,246,240,0.3);
+    padding: 14px 28px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .stat-box {
+    background: rgba(13,32,69,0.8);
+    padding: 24px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  .stat-box .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-box .label {
+    font-size: 12px;
+    color: rgba(248,246,240,0.6);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── MARQUEE ── */
+  .ticker {
+    background: var(--saffron);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker 40s linear infinite;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.3px;
+  }
+  .ticker-inner span { margin: 0 40px; }
+  .ticker-inner span::before { content: '◆ '; }
+  @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+
+  /* ── SERVICES ── */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .section-header h3 {
+    font-family: 'Noto Serif', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .section-header .line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-header .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--saffron);
+    letter-spacing: 2px;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .service-card {
+    background: rgba(26,58,124,0.2);
+    border: 1px solid var(--border);
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  .service-card:hover { background: rgba(26,58,124,0.5); border-color: var(--gold); transform: translateY(-4px); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .service-card h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--offwhite);
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+
+  /* Schemes */
+  .schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .scheme-card {
+    background: linear-gradient(135deg, rgba(26,58,124,0.3) 0%, rgba(13,32,69,0.5) 100%);
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+  .scheme-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .scheme-card .badge {
+    display: inline-block;
+    background: var(--saffron);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .scheme-card h4 {
+    font-family: 'Noto Serif', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .scheme-card p {
+    font-size: 13px;
+    color: rgba(248,246,240,0.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .scheme-card .apply-link {
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+  }
+  .scheme-card .apply-link:hover { color: var(--gold-light); }
+  .scheme-card .apply-link::after { content: '→'; transition: transform 0.2s; }
+  .scheme-card .apply-link:hover::after { transform: translateX(4px); }
+
+  /* Quick Links */
+  .quick-links {
+    background: rgba(13,32,69,0.5);
+    border: 1px solid var(--border);
+  }
+  .quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    divide: x;
+  }
+  .quick-link-item {
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .quick-link-item:hover { background: rgba(200,149,58,0.06); }
+  .quick-link-item .ql-icon { font-size: 22px; flex-shrink: 0; }
+  .quick-link-item .ql-text { font-size: 13px; color: var(--offwhite); font-weight: 500; line-height: 1.3; }
+  .quick-link-item .ql-sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
+
+  /* Helpline */
+  .helpline-bar {
+    background: var(--royal);
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    padding: 20px 0;
+    margin: 0;
+  }
+  .helpline-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .helpline-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .helpline-item .icon { font-size: 28px; }
+  .helpline-item .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .helpline-item .desc { font-size: 12px; color: rgba(248,246,240,0.6); }
+
+  /* Footer */
+  footer {
+    background: #06101f;
+    border-top: 2px solid var(--border);
+    padding: 40px 24px 20px;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand h4 {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .footer-brand p { font-size: 12px; color: var(--gray); line-height: 1.7; }
+  .footer-col h5 { font-size: 12px; font-weight: 600; color: var(--offwhite); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col a { display: block; font-size: 12px; color: var(--gray); text-decoration: none; margin-bottom: 8px; }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* ══════════════════════════════════════════════
+     APPLICATION FORM PAGE
+  ══════════════════════════════════════════════ */
+  #app-page {
+    display: none;
+    min-height: 100vh;
+    background: var(--navy);
+  }
+
+  .form-hero {
+    background: linear-gradient(135deg, var(--deep-blue), #0f2d5c);
+    border-bottom: 3px solid var(--gold);
+    padding: 40px 24px;
+    text-align: center;
+    position: relative;
+  }
+  .form-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--saffron), var(--gold), transparent);
+  }
+  .breadcrumb {
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .breadcrumb span { color: var(--gold); }
+  .form-hero h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .form-hero p { font-size: 14px; color: rgba(248,246,240,0.65); }
+
+  .form-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Steps indicator */
+  .steps-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+  }
+  .step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(26,58,124,0.5);
+    border: 2px solid rgba(200,149,58,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray);
+    transition: all 0.3s;
+    margin-bottom: 8px;
+  }
+  .step.active .step-num {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(200,149,58,0.4);
+  }
+  .step.done .step-num {
+    background: var(--success);
+    border-color: var(--success);
+    color: white;
+  }
+  .step-label {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .step.active .step-label { color: var(--gold); font-weight: 500; }
+  .step.done .step-label { color: var(--success); }
+  .step-line {
+    flex: 1;
+    height: 2px;
+    background: rgba(200,149,58,0.2);
+    margin-bottom: 22px;
+  }
+  .step-line.done { background: var(--success); }
+
+  /* Form panels */
+  .form-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .form-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .panel-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .panel-subtitle {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-grid.full { grid-template-columns: 1fr; }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-group.span2 { grid-column: span 2; }
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(248,246,240,0.75);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+  label .req { color: var(--saffron); margin-left: 3px; }
+  input, select, textarea {
+    background: rgba(13,32,69,0.6);
+    border: 1.5px solid rgba(200,149,58,0.2);
+    color: var(--white);
+    padding: 11px 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    transition: all 0.2s;
+    outline: none;
+    width: 100%;
+    appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    background: rgba(13,32,69,0.9);
+    box-shadow: 0 0 0 3px rgba(200,149,58,0.1);
+  }
+  input::placeholder { color: rgba(248,246,240,0.3); }
+  textarea { resize: vertical; min-height: 80px; }
+  select option { background: var(--deep-blue); color: var(--white); }
+
+  .form-hint { font-size: 11px; color: var(--gray); }
+
+  .otp-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .otp-group input { flex: 1; }
+  .otp-group button {
+    background: var(--royal);
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    padding: 11px 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .otp-group button:hover { background: var(--gold); color: var(--navy); }
+
+  /* OTP box */
+  .otp-boxes {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .otp-boxes input {
+    width: 48px;
+    height: 52px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    padding: 0;
+  }
+
+  /* Upload areas */
+  .upload-zone {
+    border: 2px dashed rgba(200,149,58,0.3);
+    background: rgba(13,32,69,0.4);
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+  }
+  .upload-zone:hover { border-color: var(--gold); background: rgba(200,149,58,0.05); }
+  .upload-zone input[type=file] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .upload-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+  .upload-zone p { font-size: 13px; color: rgba(248,246,240,0.6); margin: 0; }
+  .upload-zone strong { font-size: 13px; color: var(--gold); display: block; margin-bottom: 4px; }
+  .upload-zone small { font-size: 11px; color: var(--gray); display: block; margin-top: 4px; }
+
+  .edu-entry {
+    background: rgba(26,58,124,0.15);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .add-edu-btn {
+    background: transparent;
+    border: 1.5px dashed rgba(200,149,58,0.4);
+    color: var(--gold);
+    padding: 12px;
+    width: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .add-edu-btn:hover { border-color: var(--gold); background: rgba(200,149,58,0.05); }
+
+  /* Verification badge */
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(26,122,74,0.15);
+    border: 1px solid rgba(26,122,74,0.4);
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #4ade80;
+    margin-top: 8px;
+  }
+
+  /* Section divider */
+  .form-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 20px;
+  }
+  .form-divider .div-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .form-divider .div-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* Declaration */
+  .declaration-box {
+    background: rgba(26,58,124,0.15);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+  .declaration-box p { font-size: 13px; color: rgba(248,246,240,0.75); line-height: 1.7; }
+
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(248,246,240,0.8);
+    line-height: 1.5;
+  }
+  .checkbox-group input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--gold);
+  }
+
+  /* Form navigation */
+  .form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .btn-back {
+    background: transparent;
+    border: 1.5px solid rgba(248,246,240,0.2);
+    color: rgba(248,246,240,0.6);
+    padding: 12px 28px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-back:hover { border-color: var(--white); color: var(--white); }
+  .btn-next {
+    background: var(--gold);
+    border: none;
+    color: var(--navy);
+    padding: 12px 36px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-next:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200,149,58,0.3); }
+  .btn-submit {
+    background: var(--success);
+    border: none;
+    color: white;
+    padding: 12px 36px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-submit:hover { background: #1a8f55; transform: translateY(-2px); }
+
+  /* Success screen */
+  .success-screen {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .success-icon { font-size: 64px; margin-bottom: 20px; }
+  .success-screen h3 {
+    font-family: 'Noto Serif', serif;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .success-screen p { font-size: 15px; color: rgba(248,246,240,0.65); margin-bottom: 8px; }
+  .app-ref {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    color: var(--gold);
+    background: rgba(200,149,58,0.1);
+    border: 1px solid var(--border);
+    padding: 14px 30px;
+    display: inline-block;
+    margin: 20px 0;
+    letter-spacing: 3px;
+  }
+
+  /* Utility */
+  .error { border-color: #e53e3e !important; }
+  .err-msg { font-size: 11px; color: #fc8181; }
+  .info-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--gold);
+    background: rgba(200,149,58,0.1);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-left: auto;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(4, 1fr); }
+    .schemes-grid { grid-template-columns: 1fr 1fr; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.span2 { grid-column: span 1; }
+  }
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .schemes-grid { grid-template-columns: 1fr; }
+    .quick-links-grid { grid-template-columns: 1fr 1fr; }
+    header .header-text h1 { font-size: 16px; }
+    .hero h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HOME PAGE ════════════════ -->
+<div id="home-page">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>भारत सरकार | Government of India</span>
+      <div>
+        <a href="#">Screen Reader</a>
+        <a href="#">A- A A+</a>
+        <a href="#">हिंदी</a>
+        <a href="#">English</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <svg class="emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#c8953a" stroke-width="2"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#c8953a" stroke-width="0.5"/>
+        <text x="50" y="38" text-anchor="middle" fill="#c8953a" font-size="22">🏛️</text>
+        <text x="50" y="60" text-anchor="middle" fill="#c8953a" font-size="8" font-family="serif" font-weight="bold">GOVT OF</text>
+        <text x="50" y="70" text-anchor="middle" fill="#e8b455" font-size="8" font-family="serif" font-weight="bold">INDIA</text>
+        <path d="M20 80 Q50 90 80 80" fill="none" stroke="#c8953a" stroke-width="1"/>
+      </svg>
+      <div class="header-text">
+        <div class="hindi">प्रधानमंत्री समाजिक कल्याण योजना पोर्टल</div>
+        <h1>Pradhan Mantri Samajik Kalyan Yojana Portal</h1>
+        <div class="subtitle">Ministry of Social Justice & Empowerment | Government of India</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-login">Login</button>
+        <button class="btn-register" onclick="showAppPage()">Apply Now</button>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-inner">
+        <a href="#" class="active">Home</a>
+        <a href="#">About Us</a>
+        <a href="#" onclick="showAppPage(); return false;">Schemes</a>
+        <a href="#">Beneficiaries</a>
+        <a href="#">Documents</a>
+        <a href="#">Track Status</a>
+        <a href="#">Grievances</a>
+        <a href="#">RTI</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>New: PM Aawas Yojana applications open until March 31, 2025</span>
+      <span>Scholarship disbursement for 2024-25 started — check your status</span>
+      <span>Updated KYC mandatory for all beneficiaries by Feb 28, 2025</span>
+      <span>Helpline 14567 now available 24x7 in all regional languages</span>
+      <span>DBT transfers scheduled every 1st and 15th of the month</span>
+      <span>New: PM Aawas Yojana applications open until March 31, 2025</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">Welfare · Empowerment · Dignity</div>
+        <h2>Delivering <span>Social Security</span> to Every Citizen</h2>
+        <p>A unified digital gateway for all Government of India welfare schemes — housing, education, pensions, healthcare and financial support for every eligible citizen.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="showAppPage()">Apply for Benefits</button>
+          <button class="btn-outline">Track Application</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="num">14.2Cr</div>
+          <div class="label">Beneficiaries Enrolled</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">₹3.8L Cr</div>
+          <div class="label">Total Disbursed</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">96</div>
+          <div class="label">Active Schemes</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">99.2%</div>
+          <div class="label">DBT Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="section">
+    <div class="section-header">
+      <div class="tag">SERVICES</div>
+      <h3>Quick Services & Citizen Utilities</h3>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <a href="#" class="service-card"><span class="service-icon">🏠</span><h4>Housing Schemes</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🎓</span><h4>Education & Scholarships</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🏥</span><h4>Health & Ayushman</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">👴</span><h4>Old Age Pension</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">👶</span><h4>Maternity Benefits</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">♿</span><h4>Disability Support</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🌾</span><h4>Farmers' Welfare</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">💼</span><h4>Employment & MGNREGA</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">📱</span><h4>Aadhaar Services</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🏦</span><h4>Jan Dhan Banking</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🍽️</span><h4>Food Security (PDS)</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🔥</span><h4>PM Ujjwala Gas</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">🤝</span><h4>SC/ST Welfare</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">👧</span><h4>Women Empowerment</h4></a>
+      <a href="#" class="service-card"><span class="service-icon">📊</span><h4>Track Status</h4></a>
+    </div>
+  </div>
+
+  <!-- Schemes -->
+  <div style="background: rgba(13,32,69,0.4); padding: 1px 0;">
+    <div class="section">
+      <div class="section-header">
+        <div class="tag">PROGRAMS</div>
+        <h3>Featured Government Schemes</h3>
+        <div class="line"></div>
+      </div>
+      <div class="schemes-grid">
+        <div class="scheme-card">
+          <div class="badge">Open Now</div>
+          <h4>PM Samajik Suraksha Yojana</h4>
+          <p>Monthly financial assistance of ₹3,000 for eligible families below the poverty line including widows, disabled persons, and senior citizens.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+        <div class="scheme-card">
+          <div class="badge">Scholarship</div>
+          <h4>National Merit Scholarship</h4>
+          <p>Annual scholarship of ₹36,000 for meritorious students from economically weaker sections pursuing higher education.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+        <div class="scheme-card">
+          <div class="badge">Housing</div>
+          <h4>PM Awas Yojana – Urban</h4>
+          <p>Interest subsidy on home loans up to ₹6 lakh for EWS/LIG categories. Own your home under the government's housing for all mission.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+        <div class="scheme-card">
+          <div class="badge">Health</div>
+          <h4>Ayushman Bharat – PMJAY</h4>
+          <p>Cashless health insurance cover of ₹5 lakh per family per year. Covers hospitalisation expenses across 20,000+ empanelled hospitals.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+        <div class="scheme-card">
+          <div class="badge">Livelihood</div>
+          <h4>PM MUDRA Yojana</h4>
+          <p>Collateral-free micro loans from ₹10,000 to ₹10 lakh for small businesses and entrepreneurs under Shishu, Kishore, and Tarun categories.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+        <div class="scheme-card">
+          <div class="badge">Agriculture</div>
+          <h4>PM Kisan Samman Nidhi</h4>
+          <p>Direct income support of ₹6,000/year in three equal instalments directly to eligible farmer families across India.</p>
+          <button class="apply-link" onclick="showAppPage()">Apply Online</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="section">
+    <div class="section-header">
+      <div class="tag">LINKS</div>
+      <h3>Quick Access Links</h3>
+      <div class="line"></div>
+    </div>
+    <div class="quick-links">
+      <div class="quick-links-grid">
+        <a href="#" class="quick-link-item"><span class="ql-icon">📋</span><div><div class="ql-text">Application Status</div><div class="ql-sub">Track your submission</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">📄</span><div><div class="ql-text">Download Forms</div><div class="ql-sub">PDF & fillable forms</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">🔔</span><div><div class="ql-text">Notifications</div><div class="ql-sub">Latest circulars & orders</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">📊</span><div><div class="ql-text">Beneficiary List</div><div class="ql-sub">Search enrolled citizens</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">📞</span><div><div class="ql-text">Grievance Portal</div><div class="ql-sub">Register a complaint</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">🏛️</span><div><div class="ql-text">CSC Locator</div><div class="ql-sub">Find nearest service center</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">📱</span><div><div class="ql-text">UMANG App</div><div class="ql-sub">Mobile govt services</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">🔑</span><div><div class="ql-text">DigiLocker</div><div class="ql-sub">Digital document wallet</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">💰</span><div><div class="ql-text">DBT Status</div><div class="ql-sub">Direct benefit transfer</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">🗂️</span><div><div class="ql-text">RTI Portal</div><div class="ql-sub">Right to Information</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">📖</span><div><div class="ql-text">Guidelines</div><div class="ql-sub">Eligibility criteria & rules</div></div></a>
+        <a href="#" class="quick-link-item"><span class="ql-icon">🌐</span><div><div class="ql-text">State Portals</div><div class="ql-sub">State-specific schemes</div></div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Helpline -->
+  <div class="helpline-bar">
+    <div class="helpline-inner">
+      <div class="helpline-item">
+        <span class="icon">📞</span>
+        <div>
+          <div class="num">14567</div>
+          <div class="desc">National Welfare Helpline (24×7)</div>
+        </div>
+      </div>
+      <div class="helpline-item">
+        <span class="icon">💬</span>
+        <div>
+          <div class="num">1800-11-0001</div>
+          <div class="desc">Toll Free Grievance Number</div>
+        </div>
+      </div>
+      <div class="helpline-item">
+        <span class="icon">📧</span>
+        <div>
+          <div class="num" style="font-size:14px;">helpdesk@pmsky.gov.in</div>
+          <div class="desc">Official Email Support</div>
+        </div>
+      </div>
+      <div class="helpline-item">
+        <span class="icon">📱</span>
+        <div>
+          <div class="num" style="font-size:14px;">SMS "PMSKY" to 7738299899</div>
+          <div class="desc">Get Status via SMS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>PM Samajik Kalyan Yojana Portal</h4>
+          <p>An official portal of the Ministry of Social Justice & Empowerment, Government of India. Designed to enable seamless access to welfare schemes and social security benefits for all eligible citizens.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Schemes</h5>
+          <a href="#">PM Awas Yojana</a>
+          <a href="#">PM-KISAN</a>
+          <a href="#">Ayushman Bharat</a>
+          <a href="#">PM MUDRA</a>
+          <a href="#">MGNREGA</a>
+          <a href="#">View All Schemes</a>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#">Apply Online</a>
+          <a href="#">Track Application</a>
+          <a href="#">Download Forms</a>
+          <a href="#">CSC Locator</a>
+          <a href="#">Grievance</a>
+        </div>
+        <div class="footer-col">
+          <h5>Government</h5>
+          <a href="#">India.gov.in</a>
+          <a href="#">MyGov.in</a>
+          <a href="#">DigiLocker</a>
+          <a href="#">UMANG App</a>
+          <a href="#">RTI Online</a>
+          <a href="#">Data.gov.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Ministry of Social Justice & Empowerment, Government of India | Last Updated: Feb 2025</span>
+        <span>Privacy Policy · Terms of Use · Accessibility · Sitemap</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<!-- ════════════════ END HOME ════════════════ -->
+
+
+<!-- ════════════════ APPLICATION PAGE ════════════════ -->
+<div id="app-page">
+
+  <header>
+    <div class="header-inner">
+      <svg class="emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#c8953a" stroke-width="2"/>
+        <text x="50" y="38" text-anchor="middle" fill="#c8953a" font-size="22">🏛️</text>
+        <text x="50" y="60" text-anchor="middle" fill="#c8953a" font-size="8" font-family="serif" font-weight="bold">GOVT OF</text>
+        <text x="50" y="70" text-anchor="middle" fill="#e8b455" font-size="8" font-family="serif" font-weight="bold">INDIA</text>
+      </svg>
+      <div class="header-text">
+        <div class="hindi">आवेदन पोर्टल | Application Portal</div>
+        <h1>Pradhan Mantri Samajik Kalyan Yojana Portal</h1>
+        <div class="subtitle">Ministry of Social Justice & Empowerment | Government of India</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-login" onclick="showHomePage()">← Back to Home</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="form-hero">
+    <div class="breadcrumb">Home <span>/ Schemes</span> <span>/ PM Samajik Suraksha Yojana</span> <span>/ Apply Online</span></div>
+    <h2>PM Samajik Suraksha Yojana — Online Application</h2>
+    <p>Monthly Financial Assistance of ₹3,000 for eligible families | Application Form 2024-25</p>
+  </div>
+
+  <div class="form-container">
+
+    <!-- Steps -->
+    <div class="steps-bar" id="steps-bar">
+      <div class="step active" id="step-1"><div class="step-num">1</div><div class="step-label">Registration &amp;<br>Verification</div></div>
+      <div class="step-line" id="line-1-2"></div>
+      <div class="step" id="step-2"><div class="step-num">2</div><div class="step-label">Personal<br>Details</div></div>
+      <div class="step-line" id="line-2-3"></div>
+      <div class="step" id="step-3"><div class="step-num">3</div><div class="step-label">Education &amp;<br>Employment</div></div>
+      <div class="step-line" id="line-3-4"></div>
+      <div class="step" id="step-4"><div class="step-num">4</div><div class="step-label">Bank &amp;<br>Family Details</div></div>
+      <div class="step-line" id="line-4-5"></div>
+      <div class="step" id="step-5"><div class="step-num">5</div><div class="step-label">Document<br>Upload</div></div>
+      <div class="step-line" id="line-5-6"></div>
+      <div class="step" id="step-6"><div class="step-num">6</div><div class="step-label">Review &amp;<br>Submit</div></div>
+    </div>
+
+    <!-- PANEL 1: Registration -->
+    <div class="form-panel active" id="panel-1">
+      <div class="panel-title">Step 1: Registration & OTP Verification</div>
+      <div class="panel-subtitle">Create your account to begin the application. You will receive OTPs on your mobile and email for verification.</div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Mobile Verification</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Mobile Number <span class="req">*</span></label>
+          <div class="otp-group">
+            <input type="tel" id="mobile" placeholder="10-digit mobile number" maxlength="10">
+            <button onclick="sendOTP('mobile')">Send OTP</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Enter Mobile OTP <span class="req">*</span></label>
+          <div class="otp-boxes">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+            <input type="text" maxlength="1" class="otp-inp" oninput="otpMove(this)">
+          </div>
+          <div id="mobile-verified" style="display:none" class="verified-badge">✅ Mobile Verified</div>
+        </div>
+      </div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Email Verification</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Email Address <span class="req">*</span></label>
+          <div class="otp-group">
+            <input type="email" id="email" placeholder="yourname@example.com">
+            <button onclick="sendOTP('email')">Send OTP</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Enter Email OTP <span class="req">*</span></label>
+          <input type="text" id="email-otp" placeholder="6-digit OTP from email" maxlength="6">
+          <div id="email-verified" style="display:none" class="verified-badge">✅ Email Verified</div>
+        </div>
+      </div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Set Password</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Create Password <span class="req">*</span></label>
+          <input type="password" id="password" placeholder="Minimum 8 characters">
+          <span class="form-hint">Must include uppercase, lowercase, number, and special character</span>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password <span class="req">*</span></label>
+          <input type="password" id="confirm-password" placeholder="Re-enter password">
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <div></div>
+        <button class="btn-next" onclick="nextStep(1)">Proceed to Personal Details →</button>
+      </div>
+    </div>
+
+    <!-- PANEL 2: Personal Details -->
+    <div class="form-panel" id="panel-2">
+      <div class="panel-title">Step 2: Personal Details</div>
+      <div class="panel-subtitle">Provide your accurate personal information as per government identity documents.</div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Identity Information</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First Name (as per Aadhaar) <span class="req">*</span></label>
+          <input type="text" placeholder="Enter first name">
+        </div>
+        <div class="form-group">
+          <label>Middle Name</label>
+          <input type="text" placeholder="Enter middle name (if any)">
+        </div>
+        <div class="form-group">
+          <label>Last Name / Surname <span class="req">*</span></label>
+          <input type="text" placeholder="Enter last name">
+        </div>
+        <div class="form-group">
+          <label>Aadhaar Number <span class="req">*</span></label>
+          <input type="text" placeholder="12-digit Aadhaar number" maxlength="12">
+          <span class="form-hint">Your Aadhaar details will be validated with UIDAI</span>
+        </div>
+        <div class="form-group">
+          <label>Date of Birth <span class="req">*</span></label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Gender <span class="req">*</span></label>
+          <select>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Transgender</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Religion</label>
+          <select>
+            <option value="">Select Religion</option>
+            <option>Hindu</option>
+            <option>Muslim</option>
+            <option>Christian</option>
+            <option>Sikh</option>
+            <option>Buddhist</option>
+            <option>Jain</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Caste Category <span class="req">*</span></label>
+          <select>
+            <option value="">Select Category</option>
+            <option>General</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>EWS</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nationality <span class="req">*</span></label>
+          <select>
+            <option>Indian</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Marital Status <span class="req">*</span></label>
+          <select>
+            <option value="">Select</option>
+            <option>Unmarried</option>
+            <option>Married</option>
+            <option>Widowed</option>
+            <option>Divorced</option>
+            <option>Separated</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Annual Family Income (₹) <span class="req">*</span></label>
+          <input type="number" placeholder="Enter annual income">
+        </div>
+        <div class="form-group">
+          <label>BPL Card Number</label>
+          <input type="text" placeholder="Enter BPL/Ration Card number">
+        </div>
+      </div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Contact & Address</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group span2">
+          <label>Permanent Address (House No., Street, Colony) <span class="req">*</span></label>
+          <input type="text" placeholder="Full address">
+        </div>
+        <div class="form-group">
+          <label>District <span class="req">*</span></label>
+          <input type="text" placeholder="District name">
+        </div>
+        <div class="form-group">
+          <label>State / UT <span class="req">*</span></label>
+          <select>
+            <option value="">Select State</option>
+            <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+            <option>Delhi</option><option>Gujarat</option><option>Haryana</option>
+            <option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option>
+            <option>Maharashtra</option><option>Odisha</option><option>Punjab</option>
+            <option>Rajasthan</option><option>Tamil Nadu</option><option>Telangana</option>
+            <option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Pin Code <span class="req">*</span></label>
+          <input type="text" placeholder="6-digit PIN code" maxlength="6">
+        </div>
+        <div class="form-group">
+          <label>Urban / Rural <span class="req">*</span></label>
+          <select>
+            <option value="">Select</option>
+            <option>Urban</option>
+            <option>Rural</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="prevStep(2)">← Back</button>
+        <button class="btn-next" onclick="nextStep(2)">Proceed to Education →</button>
+      </div>
+    </div>
+
+    <!-- PANEL 3: Education & Employment -->
+    <div class="form-panel" id="panel-3">
+      <div class="panel-title">Step 3: Educational Qualifications & Employment</div>
+      <div class="panel-subtitle">Provide your highest educational qualification and current employment status. Add multiple qualifications using the button below.</div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Educational Qualifications</div><div class="div-line"></div></div>
+
+      <div id="edu-list">
+        <div class="edu-entry">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Qualification Level <span class="req">*</span></label>
+              <select>
+                <option value="">Select</option>
+                <option>No Formal Education</option>
+                <option>Primary (Class 1-5)</option>
+                <option>Middle (Class 6-8)</option>
+                <option>Secondary (Class 10)</option>
+                <option>Senior Secondary (Class 12)</option>
+                <option>ITI / Diploma</option>
+                <option>Bachelor's Degree (B.A./B.Sc./B.Com etc.)</option>
+                <option>Master's Degree</option>
+                <option>Professional Degree (B.Tech/MBBS/LLB etc.)</option>
+                <option>Doctorate (Ph.D.)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Subject / Stream</label>
+              <input type="text" placeholder="e.g., Science, Arts, Engineering">
+            </div>
+            <div class="form-group">
+              <label>Board / University</label>
+              <input type="text" placeholder="Name of board or university">
+            </div>
+            <div class="form-group">
+              <label>Year of Passing</label>
+              <input type="number" placeholder="YYYY" min="1950" max="2025">
+            </div>
+            <div class="form-group">
+              <label>Percentage / CGPA</label>
+              <input type="text" placeholder="e.g., 75% or 7.5 CGPA">
+            </div>
+            <div class="form-group">
+              <label>Roll / Enrollment Number</label>
+              <input type="text" placeholder="As per certificate">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="add-edu-btn" onclick="addEduEntry()">+ Add Another Qualification</button>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Employment Details</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Employment Status <span class="req">*</span></label>
+          <select>
+            <option value="">Select</option>
+            <option>Unemployed</option>
+            <option>Self-Employed</option>
+            <option>Daily Wage Worker</option>
+            <option>Private Sector Employee</option>
+            <option>Government Employee</option>
+            <option>Retired</option>
+            <option>Student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Occupation / Trade</label>
+          <input type="text" placeholder="e.g., Farmer, Weaver, Carpenter">
+        </div>
+        <div class="form-group">
+          <label>Monthly Income (₹)</label>
+          <input type="number" placeholder="If employed / self-employed">
+        </div>
+        <div class="form-group">
+          <label>Employer Name</label>
+          <input type="text" placeholder="Name of employer (if applicable)">
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="prevStep(3)">← Back</button>
+        <button class="btn-next" onclick="nextStep(3)">Proceed to Bank Details →</button>
+      </div>
+    </div>
+
+    <!-- PANEL 4: Bank & Family Details -->
+    <div class="form-panel" id="panel-4">
+      <div class="panel-title">Step 4: Bank Account & Family Details</div>
+      <div class="panel-subtitle">Bank details are required for Direct Benefit Transfer (DBT). Ensure your account is linked with Aadhaar.</div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Bank Account Information</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Account Holder Name <span class="req">*</span></label>
+          <input type="text" placeholder="As per bank records">
+        </div>
+        <div class="form-group">
+          <label>Account Number <span class="req">*</span></label>
+          <input type="text" placeholder="Enter account number">
+        </div>
+        <div class="form-group">
+          <label>Confirm Account Number <span class="req">*</span></label>
+          <input type="text" placeholder="Re-enter account number">
+        </div>
+        <div class="form-group">
+          <label>IFSC Code <span class="req">*</span></label>
+          <input type="text" placeholder="e.g., SBIN0001234" maxlength="11">
+        </div>
+        <div class="form-group">
+          <label>Bank Name <span class="req">*</span></label>
+          <input type="text" placeholder="Name of your bank">
+        </div>
+        <div class="form-group">
+          <label>Branch Name</label>
+          <input type="text" placeholder="Branch name and city">
+        </div>
+      </div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Family / Household Details</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Father's / Husband's Name <span class="req">*</span></label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label>Mother's Name</label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label>Total Family Members <span class="req">*</span></label>
+          <input type="number" placeholder="Number of members in household" min="1">
+        </div>
+        <div class="form-group">
+          <label>Number of Dependents</label>
+          <input type="number" placeholder="Members dependent on you" min="0">
+        </div>
+        <div class="form-group">
+          <label>Disability Status</label>
+          <select>
+            <option value="">Select</option>
+            <option>Not Applicable</option>
+            <option>Visual Impairment</option>
+            <option>Hearing Impairment</option>
+            <option>Locomotor Disability</option>
+            <option>Intellectual Disability</option>
+            <option>Multiple Disabilities</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Disability Percentage (%)</label>
+          <input type="number" placeholder="If applicable" min="0" max="100">
+        </div>
+        <div class="form-group span2">
+          <label>Special Circumstances (if any)</label>
+          <textarea placeholder="e.g., widow, orphan, natural calamity victim, migrant worker — describe your situation"></textarea>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="prevStep(4)">← Back</button>
+        <button class="btn-next" onclick="nextStep(4)">Proceed to Documents →</button>
+      </div>
+    </div>
+
+    <!-- PANEL 5: Document Upload -->
+    <div class="form-panel" id="panel-5">
+      <div class="panel-title">Step 5: Document Upload</div>
+      <div class="panel-subtitle">Upload clear, legible scans or photos of all required documents. Accepted formats: PDF, JPG, PNG. Maximum size: 2 MB per document.</div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Identity & Address Documents</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Aadhaar Card <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'aadhar-name')">
+            <span class="upload-icon">🪪</span>
+            <strong>Upload Aadhaar Card</strong>
+            <p id="aadhar-name">Click or drag file here</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Passport Size Photograph <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".jpg,.jpeg,.png" onchange="fileSelected(this, 'photo-name')">
+            <span class="upload-icon">📷</span>
+            <strong>Upload Photograph</strong>
+            <p id="photo-name">White background, recent photo</p>
+            <small>JPG / PNG · Max 500 KB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Address Proof <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'addr-name')">
+            <span class="upload-icon">🏠</span>
+            <strong>Address Proof</strong>
+            <p id="addr-name">Voter ID / Utility Bill / Rent Agreement</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Income Certificate <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'income-name')">
+            <span class="upload-icon">📋</span>
+            <strong>Income Certificate</strong>
+            <p id="income-name">Issued by competent authority</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-divider"><div class="div-line"></div><div class="div-title">Education & Other Documents</div><div class="div-line"></div></div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Highest Education Certificate <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'edu-name')">
+            <span class="upload-icon">🎓</span>
+            <strong>Education Certificate</strong>
+            <p id="edu-name">Marksheet or degree certificate</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Bank Passbook / Cancelled Cheque <span class="req">*</span></label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'bank-name')">
+            <span class="upload-icon">🏦</span>
+            <strong>Bank Document</strong>
+            <p id="bank-name">First page of passbook or cheque</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Caste Certificate (if applicable)</label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'caste-name')">
+            <span class="upload-icon">📃</span>
+            <strong>Caste Certificate</strong>
+            <p id="caste-name">For OBC / SC / ST applicants</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Disability Certificate (if applicable)</label>
+          <div class="upload-zone">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png" onchange="fileSelected(this, 'dis-name')">
+            <span class="upload-icon">♿</span>
+            <strong>Disability Certificate</strong>
+            <p id="dis-name">Issued by medical authority</p>
+            <small>PDF / JPG / PNG · Max 2 MB</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="prevStep(5)">← Back</button>
+        <button class="btn-next" onclick="nextStep(5)">Preview & Review →</button>
+      </div>
+    </div>
+
+    <!-- PANEL 6: Review & Submit -->
+    <div class="form-panel" id="panel-6">
+      <div class="panel-title">Step 6: Review & Submit Application</div>
+      <div class="panel-subtitle">Please review the summary below. Once submitted, changes can only be made by contacting the helpdesk.</div>
+
+      <div style="background: rgba(26,58,124,0.15); border: 1px solid var(--border); padding: 20px; margin-bottom: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 30px; font-size: 13px;">
+          <div><span style="color: var(--gray);">Scheme:</span> <span style="color: var(--white);">PM Samajik Suraksha Yojana</span></div>
+          <div><span style="color: var(--gray);">Benefit Amount:</span> <span style="color: var(--gold);">₹3,000/month</span></div>
+          <div><span style="color: var(--gray);">Mobile:</span> <span style="color: var(--white);">✅ Verified</span></div>
+          <div><span style="color: var(--gray);">Email:</span> <span style="color: var(--white);">✅ Verified</span></div>
+          <div><span style="color: var(--gray);">Documents Uploaded:</span> <span style="color: var(--white);">6 files</span></div>
+          <div><span style="color: var(--gray);">Application Year:</span> <span style="color: var(--white);">2024–25</span></div>
+        </div>
+      </div>
+
+      <div class="declaration-box">
+        <p><strong style="color: var(--gold);">Declaration / घोषणा:</strong> I hereby declare that all the information furnished in this application form is true, correct, and complete to the best of my knowledge and belief. I understand that any false or misleading information may result in rejection of my application and legal action as per applicable laws. I also consent to the verification of my details through UIDAI, DBT, and other government databases.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+        <label class="checkbox-group">
+          <input type="checkbox" id="decl1">
+          I confirm that all information provided is accurate and I have not suppressed any material facts.
+        </label>
+        <label class="checkbox-group">
+          <input type="checkbox" id="decl2">
+          I consent to the processing of my personal data (including Aadhaar) for the purpose of this welfare scheme in accordance with government guidelines.
+        </label>
+        <label class="checkbox-group">
+          <input type="checkbox" id="decl3">
+          I have read and understood the eligibility criteria and I am eligible to apply for this scheme.
+        </label>
+      </div>
+
+      <div class="form-nav">
+        <button class="btn-back" onclick="prevStep(6)">← Back</button>
+        <button class="btn-submit" onclick="submitApplication()">✓ Submit Application</button>
+      </div>
+    </div>
+
+    <!-- Success Panel -->
+    <div class="form-panel" id="panel-success">
+      <div class="success-screen">
+        <div class="success-icon">🎉</div>
+        <h3>Application Submitted Successfully!</h3>
+        <p>Your application for <strong>PM Samajik Suraksha Yojana</strong> has been received.</p>
+        <p>Your Application Reference Number is:</p>
+        <div class="app-ref" id="ref-num"></div>
+        <p style="margin-top: 10px;">An SMS and email confirmation has been sent to your registered mobile and email address.</p>
+        <p style="margin-top: 8px; font-size: 12px; color: var(--gray);">Processing time: 15–30 working days | Helpline: <strong style="color: var(--gold);">14567</strong></p>
+        <div style="margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="showHomePage()">Back to Home</button>
+          <button class="btn-outline" style="border: 1.5px solid var(--border); color: rgba(248,246,240,0.7); padding: 14px 28px; background: transparent; cursor: pointer;">Download Acknowledgement</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  let currentStep = 1;
+  const totalSteps = 6;
+
+  function showAppPage() {
+    document.getElementById('home-page').style.display = 'none';
+    document.getElementById('app-page').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+  function showHomePage() {
+    document.getElementById('home-page').style.display = 'block';
+    document.getElementById('app-page').style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+
+  function updateSteps(newStep) {
+    for (let i = 1; i <= totalSteps; i++) {
+      const el = document.getElementById('step-' + i);
+      if (!el) continue;
+      el.className = 'step';
+      if (i < newStep) el.classList.add('done');
+      else if (i === newStep) el.classList.add('active');
+
+      if (i < totalSteps) {
+        const line = document.getElementById('line-' + i + '-' + (i+1));
+        if (line) line.className = 'step-line' + (i < newStep ? ' done' : '');
+      }
+    }
+  }
+
+  function nextStep(from) {
+    if (from === totalSteps) return;
+    document.getElementById('panel-' + from).classList.remove('active');
+    currentStep = from + 1;
+    document.getElementById('panel-' + currentStep).classList.add('active');
+    updateSteps(currentStep);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function prevStep(from) {
+    if (from <= 1) return;
+    document.getElementById('panel-' + from).classList.remove('active');
+    currentStep = from - 1;
+    document.getElementById('panel-' + currentStep).classList.add('active');
+    updateSteps(currentStep);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function sendOTP(type) {
+    const field = document.getElementById(type);
+    if (!field || !field.value) { alert('Please enter your ' + type + ' first.'); return; }
+    
+    // Simulate OTP sent
+    if (type === 'mobile') {
+      setTimeout(() => {
+        document.getElementById('mobile-verified').style.display = 'flex';
+      }, 1500);
+      alert('OTP sent to ' + field.value + ' (Demo: enter any 6 digits)');
+    } else {
+      setTimeout(() => {
+        document.getElementById('email-verified').style.display = 'flex';
+      }, 1500);
+      alert('OTP sent to ' + field.value + ' (Demo: enter any 6 digits)');
+    }
+  }
+
+  function otpMove(input) {
+    if (input.value.length === 1) {
+      const inputs = document.querySelectorAll('.otp-inp');
+      const idx = Array.from(inputs).indexOf(input);
+      if (idx < inputs.length - 1) inputs[idx + 1].focus();
+    }
+  }
+
+  function fileSelected(input, labelId) {
+    if (input.files && input.files[0]) {
+      const name = input.files[0].name;
+      const el = document.getElementById(labelId);
+      if (el) el.textContent = '✅ ' + name;
+    }
+  }
+
+  function addEduEntry() {
+    const list = document.getElementById('edu-list');
+    const entry = document.createElement('div');
+    entry.className = 'edu-entry';
+    entry.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <span style="font-size:12px; color: var(--gold);">Additional Qualification</span>
+        <button onclick="this.closest('.edu-entry').remove()" style="background:none; border:none; color:#fc8181; cursor:pointer; font-size:12px;">✕ Remove</button>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Qualification Level</label>
+          <select>
+            <option value="">Select</option>
+            <option>Primary</option><option>Secondary</option><option>Senior Secondary</option>
+            <option>ITI / Diploma</option><option>Bachelor's Degree</option>
+            <option>Master's Degree</option><option>Professional Degree</option><option>Doctorate</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Subject / Stream</label>
+          <input type="text" placeholder="e.g., Science, Commerce">
+        </div>
+        <div class="form-group">
+          <label>Board / University</label>
+          <input type="text" placeholder="Name of board or university">
+        </div>
+        <div class="form-group">
+          <label>Year of Passing</label>
+          <input type="number" placeholder="YYYY" min="1950" max="2025">
+        </div>
+      </div>`;
+    list.appendChild(entry);
+  }
+
+  function submitApplication() {
+    const chk1 = document.getElementById('decl1').checked;
+    const chk2 = document.getElementById('decl2').checked;
+    const chk3 = document.getElementById('decl3').checked;
+    if (!chk1 || !chk2 || !chk3) {
+      alert('Please accept all declarations before submitting.');
+      return;
+    }
+    // Show success
+    document.getElementById('panel-6').classList.remove('active');
+    document.getElementById('panel-success').classList.add('active');
+    document.getElementById('steps-bar').style.display = 'none';
+
+    // Generate reference number
+    const ref = 'PMSKY' + new Date().getFullYear() + '-' + Math.random().toString(36).substr(2,8).toUpperCase();
+    document.getElementById('ref-num').textContent = ref;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
